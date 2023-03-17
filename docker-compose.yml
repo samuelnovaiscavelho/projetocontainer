@@ -3,8 +3,6 @@ services:
   mysqldb:
     image: mysql:8
     container_name: mysqldb
-    volumes:
-      - mysqldb:/var/lib/mysql
     environment:
       MYSQL_DATABASE: projetocontainer
       MYSQL_ROOT_PASSWORD: root
@@ -23,6 +21,3 @@ services:
     depends_on:
       - mysqldb
     restart: "on-failure"
-
-volumes:
-  mysqldb:
