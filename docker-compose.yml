@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 services:
   mysqldb:
     image: mysql:8
@@ -23,7 +23,6 @@ services:
     depends_on:
       - mysqldb
     restart: "on-failure"
-
 
 volumes:
   mysqldb:
